@@ -1,0 +1,40 @@
+/* popular section start */
+.popular {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+.popular__title {
+  @include textStyle(24px, 600, #f1f2f3);
+  line-height: 140%;
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.popular__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 48px;
+}
+
+.car__card {
+  @include cardStyle(248px, 312px, 20px, 24px);
+}
+
+/* popular section  end*/
+
+@media only screen and (max-width: 768px) {
+  .popular__title {
+    font-size: 20px;
+  }
+  .popular__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .car__card {
+    width: 220px;
+  }
+}

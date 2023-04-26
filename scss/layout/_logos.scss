@@ -1,0 +1,19 @@
+/* logos start */
+
+.logos {
+  background: #0a0a0b;
+
+  padding: 76px 0 78px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 106px;
+}
+/* logos end */
+
+@media only screen and (max-width: 768px) {
+  .logos {
+    flex-wrap: wrap;
+    row-gap: 60px;
+  }
+}

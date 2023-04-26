@@ -1,0 +1,63 @@
+/* Offer start */
+
+.offer {
+  padding-top: 72px;
+  padding-bottom: 56px;
+  background-image: url("../../src/imgs/subscribe-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+  }
+  &__about {
+    &--title {
+      @include textStyle(24px, 600, #f1f2f3);
+      line-height: 140%;
+      width: 312px;
+      height: 68px;
+      margin-bottom: 32px;
+    }
+    &--text {
+      width: 375px;
+      height: 66px;
+      @include textStyle(16px, 400, #babec4);
+      margin-bottom: 48px;
+    }
+    &--btn {
+      width: 174px;
+      height: 50px;
+      @include textStyle(16px, 500, #fff);
+      padding: 14px 32px;
+      background: #4177dc;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+/* Offer end */
+
+@media only screen and (max-width: 768px) {
+  .offer {
+    .wrapper {
+      flex-direction: column;
+    }
+    &__about {
+      padding-bottom: 64px;
+      &--title {
+        font-size: 20px;
+      }
+      &--text {
+        font-size: 15px;
+      }
+    }
+  }
+}

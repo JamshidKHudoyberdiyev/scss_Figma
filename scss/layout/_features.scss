@@ -1,0 +1,106 @@
+/* Fetures start*/
+.features {
+  padding-top: 72px;
+  padding-bottom: 48px;
+
+  &__title {
+    @include textStyle(24px, 600, #f1f2f3);
+
+    line-height: 140%;
+    padding-bottom: 70px;
+    text-align: center;
+
+    color: #f1f2f3;
+  }
+  &__map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url("../../src/imgs/Map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    &--img {
+      width: 200px;
+      height: 462.53px;
+    }
+    &--info1 {
+      @include mapCard_style(127px, 92px, 12px, 20px, 370px, 60px, 0, 0);
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      color: #f1f2f3;
+    }
+    &--info2 {
+      @include mapCard_style(127px, 92px, 12px, 20px, 370px, 300px, 0, 0);
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      color: #f1f2f3;
+    }
+
+    &--info3 {
+      @include mapCard_style(127px, 92px, 12px, 20px, 600px, 170px, 0, 0);
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      color: #f1f2f3;
+    }
+  }
+}
+
+/* Fetures end*/
+
+@media only screen and (max-width: 768px) {
+  .features__title {
+    font-size: 20px;
+  }
+
+  .features__map--img {
+    width: 150px;
+    height: 346.89px;
+  }
+  .features__map--info1 {
+    width: 111px;
+    height: 84px;
+    left: 210px;
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .features__map--info2 {
+    width: 111px;
+    height: 84px;
+    top: 260px;
+    left: 210px;
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .features__map--info3 {
+    width: 111px;
+    height: 84px;
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+    left: 50px;
+    top: 150px;
+  }
+}

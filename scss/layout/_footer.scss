@@ -1,0 +1,86 @@
+/* footer start */
+
+footer {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: -400px;
+    background: rgba(55, 74, 109, 0.5);
+    filter: blur(90px);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 400px;
+    left: 424px;
+    top: 437px;
+    background: rgba(55, 74, 109, 0.5);
+    filter: blur(90px);
+  }
+
+  h2 {
+    @include textStyle(20px, 600, #f1f2f3);
+    line-height: 140%;
+    padding-bottom: 24px;
+  }
+  ul {
+    list-style: none;
+  }
+  .wrapper {
+    display: flex;
+    column-gap: 166px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 56px;
+    padding-bottom: 98px;
+  }
+}
+
+.eltcar__info {
+  width: 198px;
+  height: 112px;
+  &--text {
+    line-height: 140%;
+    @include textStyle(13px, 400, #babec4);
+  }
+}
+.company__list,
+.information__list {
+  li {
+    @include textStyle(16px, 400, #babec4);
+    padding-bottom: 12px;
+  }
+}
+
+.fallow__list {
+  width: 120px;
+  height: 76px;
+  .tarmoq {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    i {
+      color: #f1f2f3;
+    }
+  }
+}
+.footer__end {
+  text-align: center;
+  @include textStyle(12px, 400, #888b91);
+  padding-bottom: 32px;
+}
+/* footer end */
+@media only screen and (max-width: 768px) {
+  .footer {
+    .wrapper {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+}

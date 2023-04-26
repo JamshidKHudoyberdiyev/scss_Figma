@@ -1,0 +1,90 @@
+@mixin textStyle($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin cardStyle($width, $height, $radus, $padding) {
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  position: relative;
+  padding: $padding;
+  background: #111213;
+  border-radius: $radus;
+  &::before {
+    top: -30px;
+    left: -60px;
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: rgba(55, 74, 109, 0.5);
+    filter: blur(60px);
+  }
+
+  &--title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    color: #f1f2f3;
+  }
+  &--desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #babec4;
+  }
+  &--img {
+    width: 100%;
+    text-align: end;
+    padding: 12px 0 20px;
+    img {
+      width: 180px;
+      height: 80.64px;
+    }
+  }
+  &--param {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 31px;
+  }
+  &--price {
+    color: #fff;
+  }
+  &--btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@mixin mapCard_style(
+  $width,
+  $height,
+  $padding,
+  $radius,
+  $left,
+  $top,
+  $right,
+  $bottom
+) {
+  width: $width;
+  height: $height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: $padding;
+  border-radius: $radius;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}

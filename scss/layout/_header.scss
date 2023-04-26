@@ -1,0 +1,51 @@
+/*  header start */
+
+.nav {
+  padding-top: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    &--item {
+      text-decoration: none;
+      list-style-type: none;
+      &-link {
+        &.active {
+          color: #4177dc;
+        }
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          color: #babec4;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    font-size: 22px;
+    color: #ffffff;
+  }
+}
+
+/*-------------  header start -----------------*/
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    &__list {
+      display: none;
+    }
+    &__menu {
+      display: block;
+    }
+  }
+}
